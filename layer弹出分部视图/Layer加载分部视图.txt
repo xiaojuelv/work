@@ -1,0 +1,26 @@
+layer.loading = function (url, options) {
+            options.content = "正在加载.....";
+            var b = layer.open(options);
+            var index = b.index;
+            var layero = $('#layui-layer' + index).find(".layui-layer-content");
+            $.get(url, function (data) {
+                layero.html(data);
+                b.offset();
+                b.move();
+            });
+        }
+
+        function test() {
+            layer.loading("/Home/Login", {
+                title: '在线调试',
+                yes: function(index,tt){
+                    alert(tt.html());
+                    layer.close(index);
+                }
+            });
+          
+
+        }
+
+
+layer.js覆盖原来JS
