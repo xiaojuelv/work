@@ -1,0 +1,21 @@
+判断js中数据类型 的最短代码
+
+判断字符串类型的：
+
+        function isString(obj) 
+       {
+            return obj+"" === obj;
+        }
+
+判断bool类型的：
+        function isBool(obj)
+        {
+            return obj ==!!obj;
+        }
+
+判断数字类型的：
+
+        function isNumber(obj)
+        {
+            return obj == -obj;
+        }

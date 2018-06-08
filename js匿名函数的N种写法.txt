@@ -1,0 +1,45 @@
+最常见的：
+(function() { 
+alert('water'); 
+})(); 
+
+带参数的：
+(function(o) { 
+alert(o); 
+})('water'); 
+
+匿名函数链式调用：
+(function(o) { 
+alert(o); 
+return arguments.callee; 
+})('water')('down'); 
+
+不常见的：
+~(function(){ 
+alert('water'); 
+})();//写法有点酷~ 
+
+void function(){ 
+alert('water'); 
+}();//据说效率最高~ 
+
++function(){ 
+alert('water'); 
+}(); 
+
+-function(){ 
+alert('water'); 
+}(); 
+
+
+~function(){ 
+alert('water'); 
+}();
+
+!function(){ 
+alert('water'); 
+}(); 
+
+(function(){ 
+alert('water'); 
+}());//有点强制执行的味道~ 

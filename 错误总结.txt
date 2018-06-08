@@ -1,0 +1,9 @@
+1、js拼接html代码，字符串里onclick事件不执行，原因是因为拼接时传递参数时参数为string格式，但是只加了一个单引号拼接，没有额外的单引号表示它是一个string格式，需加反斜杠转义
+例：<div class="col-xs-6"><img src="/Content/img/timg.jpg" style="width:20px;height:20px;position:absolute;z-index:2;right:15px;" onclick="delimg(this,\'' + data + '\')"/><img src="' + localId + '" class="picimg" style="z-index:1;position:absolute"/>
+
+2、trim()方法未定义
+因为trim（）不是string类型为object或者为null
+
+3、浏览器报错，可点击network找到对应的方法，点击查看引起错误的原因
+
+4、微信端网页分享朋友圈或朋友不是自定义的分享，但是微信开发者工具分享的是自定义的分享。原因：微信分享不支持通过跳转微信连接获取授权后再跳转，直接跳转自己的网页即可，分享的链接域名必须与公众号配置的js安全域名保持一致。

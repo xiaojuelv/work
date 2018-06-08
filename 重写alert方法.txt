@@ -1,0 +1,35 @@
+//重写alert方法，去掉地址显示
+window.alert = function(name){
+var iframe = document.createElement("IFRAME");
+iframe.style.display="none";
+iframe.setAttribute("src", 'data:text/plain,');
+document.documentElement.appendChild(iframe);
+window.frames[0].window.alert(name);
+iframe.parentNode.removeChild(iframe);
+}
+
+//重写confirm方法，去掉地址显示
+window.confirm = function(name){
+var iframe = document.createElement("IFRAME");
+iframe.style.display="none";
+iframe.setAttribute("src", 'data:text/plain,');
+document.documentElement.appendChild(iframe);
+var result = window.frames[0].window.confirm(name);
+iframe.parentNode.removeChild(iframe);
+return result;
+}
+
+
+
+data:,<文本数据> 
+data:text/plain,<文本数据> 
+data:text/html,<HTML代码> 
+data:text/html;base64,<base64编码的HTML代码> 
+data:text/css,<CSS代码> 
+data:text/css;base64,<base64编码的CSS代码> 
+data:text/javascript,<Javascript代码> 
+data:text/javascript;base64,<base64编码的Javascript代码> 
+data:image/gif;base64,base64编码的gif图片数据 
+data:image/png;base64,base64编码的png图片数据 
+data:image/jpeg;base64,base64编码的jpeg图片数据 
+data:image/x-icon;base64,base64编码的icon图片数据

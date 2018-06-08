@@ -1,0 +1,63 @@
+C#获取指定网页HTML原代码可使用 WebClient WebRequest HttpWebRequest 三种方式来实现。
+
+当然也可使用webBrowse！在此就不研究webBrowse如何获取了。
+
+WebClient 
+
+private string GetWebClient(string url)
+{
+    string strHTML = "";
+    WebClient myWebClient = new WebClient();
+    Stream myStream = myWebClient.OpenRead(url);
+    StreamReader sr = new StreamReader(myStream, System.Text.Encoding.GetEncoding("utf-8"));
+    strHTML = sr.ReadToEnd();
+    myStream.Close();
+    return strHTML;
+}
+WebRequest 
+
+private string GetWebRequest(string url)
+{
+    Uri uri = new Uri(url);
+    WebRequest myReq = WebRequest.Create(uri);
+    WebResponse result = myReq.GetResponse();
+    Stream receviceStream = result.GetResponseStream();
+    StreamReader readerOfStream = new StreamReader(receviceStream, System.Text.Encoding.GetEncoding("utf-8"));
+    string strHTML = readerOfStream.ReadToEnd();
+    readerOfStream.Close();
+    receviceStream.Close();
+    result.Close();
+    return strHTML;
+}
+HttpWebRequest 
+
+private string GetHttpWebRequest(string url)
+{
+    Uri uri = new Uri(url);
+    HttpWebRequest myReq = (HttpWebRequest)WebRequest.Create(uri);
+    myReq.UserAgent = "User-Agent:Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705";
+    myReq.Accept = "*/*";
+    myReq.KeepAlive = true;
+    myReq.Headers.Add("Accept-Language", "zh-cn,en-us;q=0.5");
+    HttpWebResponse result = (HttpWebResponse)myReq.GetResponse();
+    Stream receviceStream = result.GetResponseStream();
+    StreamReader readerOfStream = new StreamReader(receviceStream, System.Text.Encoding.GetEncoding("utf-8"));
+    string strHTML = readerOfStream.ReadToEnd();
+    readerOfStream.Close();
+    receviceStream.Close();
+    result.Close();
+    return strHTML;
+}
+注意“utf-8”应与指定网页的编码对应。
+
+总结
+
+可以看到HttpWebRequest 方式最复杂，但确提供了更多的选择性。
+
+有的网站检测客户端的UserAgent！如163.com，你如果使用WebClient WebRequest方式获取时，将获取到的是错误提示页面内容。
+
+而通过HttpWebRequest 就没问题。
+
+源码下载：http://files.cnblogs.com/zjfree/GetHTML.rar
+
+测试环境：WIN2003 + VS2005 + C# + winForm

@@ -1,0 +1,30 @@
+  public void LogMessage(string cueString)
+        {
+            using (FileStream fs = new FileStream(@"C:\log.txt", FileMode.OpenOrCreate, FileAccess.Write))
+            {
+
+                ///根据上面创建的文件流创建写数据流
+                StreamWriter w = new StreamWriter(fs);
+
+                ///设置写数据流的起始位置为文件流的末尾
+                w.BaseStream.Seek(0, SeekOrigin.End);
+
+                w.Write("\n" + cueString);
+
+                ///写入当前系统时间并换行
+                w.Write("{0} {1} \r\n", DateTime.Now.ToLongTimeString(),
+                    DateTime.Now.ToLongDateString());
+
+                ///写入日志内容并换行
+                w.Write("\n");
+
+                ///写入------------------------------------“并换行
+                w.Write("------------------------------------\n");
+
+                ///清空缓冲区内容，并把缓冲区内容写入基础流
+                w.Flush();
+
+                ///关闭写数据流
+                w.Close();
+            }
+        }

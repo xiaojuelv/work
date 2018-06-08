@@ -1,0 +1,39 @@
+∆’Õ®
+ function wardChange(obj, patientID) {
+            var wardID = $(obj).val();
+            $.post("/Patient/GetListByWard", { wardID: wardID }, function (data) {
+                $("#" + patientID).empty();
+                var option = $("<option>").val('').text("«Î—°‘Ò");
+                $("#" + patientID).append(option);
+                for (var i = 0; i < data.length; i++) {
+                    option = $("<option>").val(data[i].Value).text(data[i].Text);
+                    $("#" + patientID).append(option);
+                }
+            });
+        }
+
+bootstrap
+ function wardChangenew(obj, Account) {
+            var wardID = $(obj).val();
+            $.post("/Account/GetListByWard", { wardID: wardID }, function (data) {
+                var newCitys = new Array();
+                var obj = new Object();
+                obj = {
+                    label: "«Î—°‘Ò",
+                    value: ""
+                };
+                newCitys.push(obj);
+                for (var i = 0; i < data.length; i++) {
+
+                    obj = {
+                        label: data[i].Text,
+                        value: data[i].Value
+                    };
+                    newCitys.push(obj);
+                  
+                }
+
+                $("#Account").multiselect('dataprovider', newCitys);
+                $('#Account').multiselect('refresh');
+            });
+        }
