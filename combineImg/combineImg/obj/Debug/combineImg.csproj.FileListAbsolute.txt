@@ -1,0 +1,9 @@
+c:\users\ding.jk\documents\visual studio 2015\Projects\combineImg\combineImg\bin\Debug\combineImg.exe.config
+c:\users\ding.jk\documents\visual studio 2015\Projects\combineImg\combineImg\bin\Debug\combineImg.exe
+c:\users\ding.jk\documents\visual studio 2015\Projects\combineImg\combineImg\bin\Debug\combineImg.pdb
+c:\users\ding.jk\documents\visual studio 2015\Projects\combineImg\combineImg\obj\Debug\combineImg.csprojResolveAssemblyReference.cache
+c:\users\ding.jk\documents\visual studio 2015\Projects\combineImg\combineImg\obj\Debug\combineImg.Form1.resources
+c:\users\ding.jk\documents\visual studio 2015\Projects\combineImg\combineImg\obj\Debug\combineImg.Properties.Resources.resources
+c:\users\ding.jk\documents\visual studio 2015\Projects\combineImg\combineImg\obj\Debug\combineImg.csproj.GenerateResource.Cache
+c:\users\ding.jk\documents\visual studio 2015\Projects\combineImg\combineImg\obj\Debug\combineImg.exe
+c:\users\ding.jk\documents\visual studio 2015\Projects\combineImg\combineImg\obj\Debug\combineImg.pdb
