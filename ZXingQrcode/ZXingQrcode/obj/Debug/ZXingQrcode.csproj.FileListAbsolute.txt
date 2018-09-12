@@ -1,0 +1,15 @@
+c:\users\ding.jk\documents\visual studio 2015\Projects\ZXingQrcode\ZXingQrcode\bin\Debug\ZXingQrcode.exe.config
+c:\users\ding.jk\documents\visual studio 2015\Projects\ZXingQrcode\ZXingQrcode\bin\Debug\ZXingQrcode.exe
+c:\users\ding.jk\documents\visual studio 2015\Projects\ZXingQrcode\ZXingQrcode\bin\Debug\ZXingQrcode.pdb
+c:\users\ding.jk\documents\visual studio 2015\Projects\ZXingQrcode\ZXingQrcode\bin\Debug\zxing.dll
+c:\users\ding.jk\documents\visual studio 2015\Projects\ZXingQrcode\ZXingQrcode\bin\Debug\zxing.presentation.dll
+c:\users\ding.jk\documents\visual studio 2015\Projects\ZXingQrcode\ZXingQrcode\bin\Debug\zxing.pdb
+c:\users\ding.jk\documents\visual studio 2015\Projects\ZXingQrcode\ZXingQrcode\bin\Debug\zxing.xml
+c:\users\ding.jk\documents\visual studio 2015\Projects\ZXingQrcode\ZXingQrcode\bin\Debug\zxing.presentation.pdb
+c:\users\ding.jk\documents\visual studio 2015\Projects\ZXingQrcode\ZXingQrcode\bin\Debug\zxing.presentation.xml
+c:\users\ding.jk\documents\visual studio 2015\Projects\ZXingQrcode\ZXingQrcode\obj\Debug\ZXingQrcode.csprojResolveAssemblyReference.cache
+c:\users\ding.jk\documents\visual studio 2015\Projects\ZXingQrcode\ZXingQrcode\obj\Debug\ZXingQrcode.Form1.resources
+c:\users\ding.jk\documents\visual studio 2015\Projects\ZXingQrcode\ZXingQrcode\obj\Debug\ZXingQrcode.Properties.Resources.resources
+c:\users\ding.jk\documents\visual studio 2015\Projects\ZXingQrcode\ZXingQrcode\obj\Debug\ZXingQrcode.csproj.GenerateResource.Cache
+c:\users\ding.jk\documents\visual studio 2015\Projects\ZXingQrcode\ZXingQrcode\obj\Debug\ZXingQrcode.exe
+c:\users\ding.jk\documents\visual studio 2015\Projects\ZXingQrcode\ZXingQrcode\obj\Debug\ZXingQrcode.pdb
